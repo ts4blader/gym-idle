@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive&family=Source+Sans+Pro:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
+
+body {
+  font-family: "Balsamiq Sans";
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+#main.row {
+  height: 100vh;
+}
+
+#login-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-pane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#login-pane input {
+  outline: none;
+  border: none;
+  font-family: "Balsamiq Sans";
+  text-align: left;
+}
+
+.input-field {
+  position: relative;
+  width: 50%;
+}
+
+.input-field input {
+  width: 100%;
+  height: 1.6rem;
+  font-size: 1.2rem;
+}
+
+.input-field input:focus + .decor .label {
+  font-size: 0.8rem;
+  top: -70%;
+  transform: translateY(0);
+  color: #0285e4;
+}
+
+.input-field input:focus + .decor .bar::after {
+  width: 100%;
+}
+
+.input-field .label {
+  transition: 250ms ease-in-out;
+  font-size: 1.2rem;
+  color: rgb(214, 202, 202);
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-field .bar {
+  width: 100%;
+  height: 0.1rem;
+  background: rgb(214, 202, 202);
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+}
+
+.input-field .bar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  height: 100%;
+  background: #0285e4;
+  transition: 250ms ease-in-out;
+}
+.my-btn-group {
+  width: 70%;
+  text-align: center;
+}
+.btn {
+  font-size: 1.2rem;
+  width: 30%;
+  background: #0285e4;
+  margin: 0.7rem;
+  border-radius: 1.2rem;
+}
+.btn.sign-in {
+  color: white;
+}
+.btn.sign-up {
+  background: transparent;
+  border: 1px solid currentColor;
+}
+
+.social-network {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-network .item {
+  text-align: center;
+  width: 15%;
+}
+.social-network .item img {
+  width: 50%;
+}

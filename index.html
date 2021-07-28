@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- cdn section  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <script src="./app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7d9840d871.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- personal css  -->
+    <link rel="stylesheet" href="./template/theme.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Gym Idle - Home Page</title>
+  </head>
+  <body>
+    <!-- nav section  -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="logo">
+        <img src="./res/icons/logo.png" alt="logo" />
+        <a href="#" class="navbar-text">Gym Idle</a>
+      </div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active-nav-link">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#product" class="nav-link">Product</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about-us" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle"
+            id="accountDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-user-alt"></i>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right subFont animate__animated animate__fadeInUp animate__faster"
+            aria-labelledby="accountDropdown"
+          >
+            <a href="#" class="dropdown-item">
+              <img src="./res/icons/profile.png" alt="" />
+              Profile
+            </a>
+            <a href="#" class="dropdown-item">
+              <img src="./res/icons/bag.png" alt="" />
+              My Cart
+              <span class="badge badge-pill badge-danger" id="cart-badge"
+                >4</span
+              >
+            </a>
+            <a href="#" class="dropdown-item">
+              <img src="./res/icons/logout.png" alt="" />
+              Log Out
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- the news section / carousel -->
+    <div
+      id="news-slide"
+      class="carousel slide carousel-fade"
+      data-ride="carousel"
+    >
+      <!-- indicator  -->
+      <ul class="carousel-indicators">
+        <li data-target="#news-slide" data-slide-to="0" class="active"></li>
+        <li data-target="#news-slide" data-slide-to="1"></li>
+        <li data-target="#news-slide" data-slide-to="2"></li>
+      </ul>
+
+      <!-- controls  -->
+      <a
+        href="#news-slide"
+        class="carousel-control-prev floating-btn"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Prev</span>
+      </a>
+      <a
+        href="#news-slide"
+        class="carousel-control-next floating-btn"
+        data-slide="next"
+        role="button"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <!-- inner  -->
+      <div class="carousel-inner">
+        <div class="carousel-item active slide-1">
+          <div
+            class="carousel-caption d-none d-md-block left-caption text-left w-40"
+          >
+            <div class="animate__animated animate__slideInLeft animate__fast">
+              <h3 class="display-2 text-bold">Welcome to Gym Idle</h3>
+              <p class="lead delay-100">
+                Get your gym clother set and cool requirement with freeshipping!
+              </p>
+              <p class="lead delay-200">Go for your health!</p>
+              <a
+                href="#"
+                class="btn btn-lg button active w-50 font-lg"
+                id="start-btn"
+              >
+                Get start!
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item slide-2">
+          <div class="carousel-caption d-none d-md-block center-caption">
+            <div class="animate__animated animate__fadeInDown animate__fast">
+              <h3 class="display-2 text-bold">2020 Summer Collection</h3>
+              <p class="lead">Try our new Summer Outfit</p>
+              <p class="lead">Stay cool!</p>
+              <a href="#" class="btn btn-lg button active w-50 font-lg">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item slide-3">
+          <div class="carousel-caption d-none d-md-block center-caption">
+            <div class="animate__animated animate__fadeInDown animate__fast">
+              <h3 class="display-2 text-bold">Push-Up Challenge</h3>
+              <p class="lead">Do 100 Push-Up everyday and get your result</p>
+              <a href="#" class="btn btn-lg button active w-50 font-lg">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron bg-main text-reverse border-none" id="product">
+      <div class="container">
+        <div class="caption">
+          <h3 class="title display-3 mb-5 text-center mx-auto px-5 bg-main">
+            Our Product
+          </h3>
+          <div class="bar bg-reverse"></div>
+        </div>
+        <div class="row text-dark">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col">
+                <div class="card border-none py-5">
+                  <img
+                    class="card-img-top w-50 mx-auto"
+                    src="./res/icons/clothes.png"
+                    alt="Clothes"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title m-0">Clothes</h5>
+                  </div>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-none py-5">
+                  <img
+                    class="card-img-top w-50 mx-auto"
+                    src="./res/icons/shoes.png"
+                    alt="Shoes"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title m-0">Shoes</h5>
+                  </div>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col">
+                <div class="card border-none py-5">
+                  <img
+                    class="card-img-top w-50 mx-auto"
+                    src="./res/icons/school-bag.png"
+                    alt="Bag"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title m-0">Bag</h5>
+                  </div>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-none py-5">
+                  <img
+                    class="card-img-top w-50 mx-auto"
+                    src="./res/icons/exercise.png"
+                    alt="Accessories"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title m-0">Accessories</h5>
+                  </div>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- produce services section / jumbotron -->
+    <div class="jumbotron bg-white m-0" id="services">
+      <div class="container">
+        <div class="caption">
+          <h3 class="title display-3 my-5 text-center mx-auto px-5 bg-white">
+            Our Services
+          </h3>
+          <div class="bar bg-dark"></div>
+        </div>
+
+        <!-- cards section  -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="./res/icons/delivery-truck.png"
+                alt="Truck"
+                class="card-img-top w-50 mx-auto"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center font-lg my-2">
+                  Free Shipping
+                </h5>
+                <p class="card-text text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                  neque pariatur nemo magni, aut quaerat ullam minus praesentium
+                  voluptatum enim.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="./res/icons/safe.png"
+                alt="Truck"
+                class="card-img-top w-50 mx-auto"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center font-lg my-2">
+                  Safe Shopping
+                </h5>
+                <p class="card-text text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                  neque pariatur nemo magni, aut quaerat ullam minus praesentium
+                  voluptatum enim.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="./res/icons/refund.png"
+                alt="Truck"
+                class="card-img-top w-50 mx-auto"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center font-lg my-2">Refund</h5>
+                <p class="card-text text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
+                  neque pariatur nemo magni, aut quaerat ullam minus praesentium
+                  voluptatum enim.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="#"
+          class="btn bg-main button font-lg mx-auto my-5 w-40"
+          id="join-btn"
+          >Join Us!</a
+        >
+      </div>
+    </div>
+    <!-- trendy product section / jumbotron -->
+    <div class="jumbotron bg-main border-none m-0" id="trendy">
+      <div class="container">
+        <div class="caption">
+          <h3
+            class="title display-3 my-5 text-center mx-auto px-5 bg-main text-reverse"
+          >
+            Trendy Products
+          </h3>
+          <div class="bar bg-reverse"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./res/image/bag.jpg"
+                    alt="Bag"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Barcedola Backpack</h5>
+                    <span class="card-text original-value text-del text-muted"
+                      >200$</span
+                    >
+                    <span class="card-text sale-value"
+                      >100$
+                      <span class="badge badge-pill badge-danger">-30%</span>
+                    </span>
+
+                    <a href="#" class="stretched-link"></a>
+                  </div>
+
+                  <!-- overlay on hover  -->
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./res/image/bottom.webp"
+                    alt="Bag"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Pant 1</h5>
+                    <span class="card-text original-value text-muted text-del"
+                      >399$</span
+                    >
+                    <span class="card-text sale-value">
+                      299$
+                      <span class="badge badge-pill badge-danger">-20%</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./res/image/bottom2.webp"
+                    alt="Pant2"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Pant 2</h5>
+                    <p class="card-text">400$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./res/image/hat.jpg"
+                    alt="Hat1"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Hat 1</h5>
+                    <p class="card-text">200$</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-lg">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./res/image/jordan.webp"
+                    alt="Sneaker1"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Jordan Sneaker</h5>
+                    <p class="card-text">1000$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./res/image/retro.webp"
+                    alt="Sneaker2"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Air Max Retro</h5>
+                    <p class="card-text">500$</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./res/image/top.webp"
+                    alt="top1"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Top 1</h5>
+                    <p class="card-text">350$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="./res/image/clothes2.webp"
+                    alt="Top2"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Top 2</h5>
+                    <p class="card-text">550$</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- order guide  -->
+    <div class="jumbotron bg-white" id="order-guide">
+      <div class="container">
+        <div class="caption">
+          <h3 class="title display-3 my-5 text-center mx-auto px-5 bg-white">
+            Order Guide
+          </h3>
+          <div class="bar bg-dark"></div>
+        </div>
+
+        <ul class="list-style-none">
+          <li>
+            <div class="row my-2 my-md-0">
+              <div class="col-md-4">
+                <img
+                  src="./res/icons/order.png"
+                  alt="Pre-Order"
+                  class="w-50 my-3 my-md-5"
+                />
+              </div>
+              <div class="col-md-8">
+                <h5 class="display-4 text-center text-md-left">Pre-order</h5>
+                <ul>
+                  <li>
+                    <p class="lead">Choose your product you want to buy!</p>
+                  </li>
+                  <li>
+                    <p class="lead">Click "Next" to Order</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="row my-2 my-md-0">
+              <div class="col-md-4">
+                <img
+                  src="./res/icons/cast.png"
+                  alt="Pre-Order"
+                  class="w-50 my-3 my-md-5"
+                />
+              </div>
+              <div class="col-md-8">
+                <h5 class="display-4 text-center text-md-left">Order</h5>
+                <ul>
+                  <li>
+                    <p class="lead">Check quantity and your address</p>
+                  </li>
+                  <li>
+                    <p class="lead">Put note if you want</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="row my-2 my-md-0">
+              <div class="col-md-4">
+                <img
+                  src="./res/icons/transaction.png"
+                  alt="Pre-Order"
+                  class="w-50 my-3 my-md-5"
+                />
+              </div>
+              <div class="col-md-8">
+                <h5 class="display-4 text-center text-md-left">Transaction</h5>
+                <ul>
+                  <li>
+                    <p class="lead">Choose transaction way you want</p>
+                  </li>
+                  <li>
+                    <p class="lead">Debit card or COD</p>
+                  </li>
+                  <li>
+                    <p class="lead">Click "Finish"</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- banner section -->
+    <div class="jumbotron bg-main border-none m-0 p-0" id="banner">
+      <div id="banner-carousel" class="carousel slide p-5" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li
+            class="active"
+            data-target="#banner-carousel"
+            data-slide-to="0"
+            aria-current="location"
+          ></li>
+          <li data-target="#banner-carousel" data-slide-to="1"></li>
+          <li data-target="#banner-carousel" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div
+                  class="col-md-4 d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    src="./res/image/gloves.webp"
+                    alt="Gloves"
+                    class="w-75 border-circle mx-3"
+                  />
+                </div>
+                <div
+                  class="col-md-8 text-reverse d-flex flex-column justify-content-center text-justify"
+                >
+                  <p class="display-4 title">Something</p>
+                  <p class="lead">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat placeat doloremque deleniti libero deserunt itaque
+                    amet tempora fugit ullam earum!
+                  </p>
+                  <a href="#" class="btn button-reverse font-lg">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div
+                  class="col-md-4 d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    src="./res/image/smallbag.webp"
+                    alt="Gloves"
+                    class="w-75 border-circle mx-3"
+                  />
+                </div>
+                <div
+                  class="col-md-8 text-reverse d-flex flex-column justify-content-center text-justify"
+                >
+                  <p class="display-4 title">Something</p>
+                  <p class="lead">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat placeat doloremque deleniti libero deserunt itaque
+                    amet tempora fugit ullam earum!
+                  </p>
+                  <a href="#" class="btn button-reverse font-lg">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div
+                  class="col-md-4 d-flex justify-content-center align-items-center"
+                >
+                  <img
+                    src="./res/image/header.webp"
+                    alt="Gloves"
+                    class="w-75 border-circle mx-3"
+                  />
+                </div>
+                <div
+                  class="col-md-8 text-reverse d-flex flex-column justify-content-center text-justify"
+                >
+                  <p class="display-4 title">Something</p>
+                  <p class="lead">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat placeat doloremque deleniti libero deserunt itaque
+                    amet tempora fugit ullam earum!
+                  </p>
+                  <a href="#" class="btn button-reverse font-lg">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- developer team  -->
+    <div class="jumbotron bg-white border-none m-0" id="about-us">
+      <div class="container">
+        <div class="caption">
+          <h3
+            class="title display-3 my-5 text-center mx-auto px-5 text-dark bg-white"
+          >
+            About Us
+          </h3>
+          <div class="bar bg-dark"></div>
+        </div>
+
+        <ul class="list-style-none text-dark">
+          <li>
+            <div class="row my-5">
+              <div class="col-md-4">
+                <img
+                  src="./res/icons/avatar.png"
+                  alt="Avatar"
+                  class="w-50 bg-dark"
+                />
+                <p class="name display-4 my-2 text-center">Tris Tran</p>
+                <p class="job lead underline m-0">Web Developer</p>
+                <ul
+                  class="d-flex list-style-none justify-content-center align-items-center my-3"
+                >
+                  <li>
+                    <img
+                      src="./res/icons/facebook.png"
+                      alt="Facebook"
+                      class="w-75 border-circle"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./res/icons/zalo.png"
+                      alt="Zalo"
+                      class="w-75 border-circle"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./res/icons/gmail.png"
+                      alt="Gmail"
+                      class="w-75 border-circle"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./res/icons/phone.png"
+                      alt="Phone"
+                      class="w-75 border-circle"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-8 my-5 my-md-0">
+                <p class="display-4 title text-center text-md-left">
+                  Hii There!
+                </p>
+                <p class="lead text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                  earum blanditiis est enim consectetur incidunt ipsa saepe?
+                  Fuga, laudantium fugiat.
+                </p>
+                <blockquote class="blockquote my-2">
+                  <p class="mb-0 font-lg">
+                    "We are different, we are the same."
+                  </p>
+                  <footer class="blockquote-footer text-dark">
+                    IKEA Foundation
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer class="bg-dark text-reverse py-3 px-5">
+      <div class="container">
+        <div class="container text-center">
+          <p>This website is using for learning</p>
+          <hr />
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h6>Product</h6>
+            <a href="#">Shoes</a>
+            <a href="#">Bag</a>
+            <a href="#">Clothes</a>
+            <a href="#">Accessories</a>
+          </div>
+          <div class="col-md-4">
+            <h6>Services</h6>
+            <a href="#">License & Term</a>
+            <a href="#">Feedback</a>
+            <a href="#">Payment Option</a>
+          </div>
+          <div class="col-md-4">
+            <h6>Foundation</h6>
+            <a href="#">Image By: Freepik</a>
+            <a href="#">Icons By: Flaticon</a>
+            <a href="#">Framework: Bootstrap 4</a>
+            <a href="#">Lib: Animate.css</a>
+          </div>
+        </div>
+        <div class="container text-center">
+          <hr />
+          <p>@Copyright2020 GymIdle.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
